@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard Pariwisata - Rinjani</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/image/WhatsApp Image 2024-07-15 at 21.31.22_9d8c72fe.jpg" alt="logo" class="logo-small" />
+      <h1>Dashboard Pariwisata Hafizan — Gunung Rinjani </h1>
+    </div>
+    <nav class="nav-right">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="stats.html">Statistik</a>
+      <a href="add.html">Tambah Data</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <div class="card profile">
+        <img src="assets/image/rinjani.jpeg" alt="profile" />
+        <div><strong>Hafizan</strong><div class="muted">Pengelola / Pelajar</div></div>
+      </div>
+
+      <div class="card">
+        <h3>Ringkasan</h3>
+        <ul class="muted small">
+          <li>Lokasi: Lombok, NTB</li>
+          <li>Tabel: pengunjung_rinjani</li>
+          <li>Backend: Node.js + Supabase</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <button id="exportCsv" class="btn">Export CSV</button>
+      </div>
+    </aside>
+
+    <section class="main">
+      <div class="cards">
+        <div class="card stat">
+          <div class="label">Total Kunjungan</div>
+          <div class="value" id="totalVisits">—</div>
+          <div class="muted small">Bulan berjalan</div>
+        </div>
+
+        <div class="card stat">
+          <div class="label">Rata-rata Harian</div>
+          <div class="value" id="avgDaily">—</div>
+          <div class="muted small">7 hari</div>
+        </div>
+
+        <div class="card stat">
+          <div class="label">Cuaca Hari Ini</div>
+          <div class="value" id="currentWeather">—</div>
+          <div class="muted small">Data terakhir</div>
+        </div>
+
+        <div class="card stat">
+          <div class="label">Rating</div>
+          <div class="value">4.8</div>
+          <div class="muted small">Berdasarkan ulasan</div>
+        </div>
+      </div>
+
+      <div class="widgets">
+        <div class="card large">
+          <h3>Grafik Kunjungan (30 hari terakhir)</h3>
+          <canvas id="visitorsChart" height="120"></canvas>
+        </div>
+
+        <div class="card large">
+          <h3>Peta Lokasi</h3>
+          <div id="map" style="height:280px;border-radius:8px"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Info / Layanan</h3>
+        <p class="muted small">Tiket, jalur pendakian, dan kontak pemandu.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Dashboard Pariwisata — Hafizan
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/charts.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tambah Data — Rinjani</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><h1>Tambah Data Kunjungan</h1></div>
+    <nav class="nav-right">
+      <a href="index.html">Beranda</a>
+      <a href="stats.html">Statistik</a>
+      <a href="add.html" class="active">Tambah Data</a>
+    </nav>
+  </header>
+
+  <main class="center container-narrow">
+    <div class="card">
+      <form id="addForm">
+        <label>Tanggal</label>
+        <input type="date" id="tanggal" required />
+
+        <label>Jumlah</label>
+        <input type="number" id="jumlah" required min="0" />
+
+        <label>Cuaca</label>
+        <input type="text" id="cuaca" placeholder="Cerah / Berawan / Hujan" />
+
+        <label>Suhu (°C)</label>
+        <input type="number" id="suhu" />
+
+        <button type="submit" class="btn">Simpan</button>
+        <div id="msg" class="muted small" style="margin-top:8px"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">&copy; 2025</footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>
